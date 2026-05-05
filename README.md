@@ -71,6 +71,7 @@ A lot of dark themes are only dark in the sense of their backgrounds. For those 
   - [Alacritty](https://github.com/alacritty/alacritty)
   - [Btop](https://github.com/aristocratos/btop)
   - [Opencode](https://opencode.ai/)
+  - [tmux](https://github.com/tmux/tmux)
 
 > [!note]
 > If you want support for a plugin, open an issue and it **WILL** be added!
@@ -224,3 +225,12 @@ import = [
 ```
 
 in your `alacritty.toml` config file.
+
+For **tmux**, add this to your `tmux.conf` (this assumes you're using `~/.config/tmux` instead of `~/.tmux.conf`)
+
+```tmux
+set -g @thorn-tmux "forest" # can be 'forest' or 'field', default is 'forest'
+run-shell "/path/to/thorn/tmux/install"
+```
+
+The path to _thorn's_ tmux theme can be anywhere, but it would preferrably be in `~/.config/tmux/` or `~/.config/tmux/plugins`.

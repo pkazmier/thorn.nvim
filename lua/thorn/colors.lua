@@ -24,7 +24,7 @@ function M.setup(opts)
       blue       = "#91C4C0",
       red        = "#D2696C",
 
-      cursorline = "#1B2C2D",
+      cursorline = "#1D3334",
       separator  = "#0B1213",
 
       statusbar  = {
@@ -35,7 +35,7 @@ function M.setup(opts)
 
       bg_float   = "#131F20",
 
-      bg_visual  = "#233935",
+      bg_visual  = "#26403E",
 
       diff = {
         add    = "#1F3329",
@@ -109,7 +109,7 @@ function M.setup(opts)
       blue       = "#4C8A80",
       red        = "#C5524D",
 
-      cursorline = "#F0F5C7",
+      cursorline = "#EEF2BA",
       separator  = "#9FB4A4",
 
       statusbar  = {
@@ -118,9 +118,9 @@ function M.setup(opts)
         sep = "#CFD69E",
       },
 
-      bg_float   = "#E6EABE",
+      bg_float   = "#EEF2BA",
 
-      bg_visual  = "#DCE6BA",
+      bg_visual  = "#D8E4AF",
 
       diff = {
         add    = "#E3EEB5",

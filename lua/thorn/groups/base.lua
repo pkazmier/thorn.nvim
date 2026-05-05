@@ -45,7 +45,7 @@ function M.get(c, opts)
     Pmenu                       = { bg = c.bg_float, fg = c.fg },
     PmenuBorder                 = { fg = c.green_3, bg = c.bg_float },
     PmenuMatch                  = { bg = c.bg_float, fg = c.green_2, bold = true },
-    PmenuSel                    = { bg = c.cursorline },
+    PmenuSel                    = { bg = c.bg_visual, bold = true },
     PmenuMatchSel               = { bg = c.cursorline },
     PmenuSbar                   = { bg = c.separator },
     PmenuThumb                  = { bg = c.bg_visual },

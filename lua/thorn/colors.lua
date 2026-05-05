@@ -38,9 +38,9 @@ function M.setup(opts)
       bg_visual  = "#233935",
 
       diff = {
-        add    = "#435B55",
-        change = "#23363B",
-        delete = "#704C4E",
+        add    = "#1F3329",
+        change = "#1E2D39",
+        delete = "#33232A",
       },
 
       git = {
@@ -123,9 +123,9 @@ function M.setup(opts)
       bg_visual  = "#DCE6BA",
 
       diff = {
-        add    = "#9CC9B0",
-        change = "#BBD3B6",
-        delete = "#D3B6B6",
+        add    = "#E3EEB5",
+        change = "#dde4e3",
+        delete = "#F0D4CC",
       },
 
       git = {

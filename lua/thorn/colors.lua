@@ -29,8 +29,8 @@ function M.setup(opts)
 
       statusbar  = {
         fg  = "#9EC59B",
-        bg  = "#152223",
-        sep = "#1A2B2C",
+        bg  = "#131F20",
+        sep = "#233935",
       },
 
       bg_float   = "#131F20",
@@ -114,8 +114,8 @@ function M.setup(opts)
 
       statusbar  = {
         fg  = "#3C6746",
-        bg  = "#ECF1C2",
-        sep = "#D9E6AD",
+        bg  = "#EFF5BD",
+        sep = "#CFD69E",
       },
 
       bg_float   = "#E6EABE",

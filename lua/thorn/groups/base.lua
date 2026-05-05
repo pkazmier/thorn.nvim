@@ -102,7 +102,7 @@ function M.get(c, opts)
     qfFileName                  = { fg = c.blue },
     qfLineNr                    = { fg = c.number },
 
-
+    TreesitterContextLineNumber = { fg = c.number, bg = c.bg_float },
 
     LspReferenceText            = { bg = c.bg_visual, bold = true },
     LspReferenceRead            = { bg = c.bg_visual, bold = true },

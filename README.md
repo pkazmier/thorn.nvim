@@ -230,7 +230,7 @@ For **tmux**, add this to your `tmux.conf` (this assumes you're using `~/.config
 
 ```tmux
 set -g @thorn-tmux "forest" # can be 'forest' or 'field', default is 'forest'
-run-shell "/path/to/thorn/tmux/install"
+run-shell "/path/to/thorn/tmux/install/thorn.tmux"
 ```
 
 The path to _thorn's_ tmux theme can be anywhere, but it would preferrably be in `~/.config/tmux/` or `~/.config/tmux/plugins`.

@@ -188,36 +188,33 @@ end
 
 To install additional themes from [extras](https://github.com/jpwol/thorn.nvim/tree/main/extras), follow these steps
 
-If installing _thorn_ with a neovim package manager, locate the install location. For lazy, it should be `~/.local/share/nvim/lazy/thorn.nvim`, but paths may vary depending on distrobution and configuration.
+If installing _thorn_ with a neovim package manager, locate the install location. For `vim.pack`, it should be `~/.local/share/nvim/site/pack/core/opt/thorn.nvim`, but paths may vary depending on distrobution and configuration.
 
 Otherwise, clone this repository with `git clone https://github.com/jpwol/thorn.nvim`.
 
-Each application (Ghostty/Kitty/Alacritty/Btop) relies on a `themes` folder within the `~/.config/<application>` directory. If you haven't created that folder within the relevant directory, you can simply copy the themes folder directly. Otherwise, copy the contents of the relevant themes folder to your `~/.config/<application>/themes` folder.
+Usually, applications (e.g., Ghostty/Kitty/Alacritty/Btop) relies on a `themes` folder within the `~/.config/<application>` directory. If you haven't created that folder within the relevant directory, please do so. Then simply copy the theme files into the target application's theme directory.
 
 ```bash
 # assuming you're in the thorn.nvim directory
 
-# copying the contents of the themes folder
-cp extras/ghostty/themes/* ~/.config/ghostty/themes/
+# copying the contents of the application's folder
+cp extras/ghostty/* ~/.config/ghostty/themes/
 
-# OR copying the folder directly
-cp -r extras/ghostty/themes ~/.config/ghostty/
-
-# Additionally, you can create a symbolic link (linux)
-cp -s extras/ghostty/themes/* ~/.config/ghostty/themes/
+# Alternatively, you can create a symbolic link (linux)
+cp -s extras/ghostty/* ~/.config/ghostty/themes/
 ```
 
 After this, the theme will be available for whichever application you choose, and you can apply it like you normally would.
 
-For ghostty, you can use `ghostty +list-themes` to preview the themes, and set them in your `config` file with `theme = Thorn <Style> <Background>`.
+For **ghostty**, you can use `ghostty +list-themes` to preview the themes, and set them in your `config` file with `theme = Thorn <Style> <Background>`.
 
-For kitty, you can simply use `kitten themes` to preview and apply the theme.
+For **kitty**, you can simply use `kitten themes` to preview and apply the theme.
 
-For btop, the theme should appear in the settings menu for selection.
+For **btop**, the theme should appear in the settings menu for selection.
 
-For opencode, copy the files from `extras/opencode` to `~/.config/opencode/themes`, then select them from `/themes`.
+For **opencode**, copy the files from `extras/opencode` to `~/.config/opencode/themes`, then select them from `/themes`.
 
-For alacritty, you would use
+For **alacritty**, you would use
 
 ```toml
 import = [

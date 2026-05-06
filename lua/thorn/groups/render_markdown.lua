@@ -1,5 +1,7 @@
 local M = {}
 
+---@param c thorn.Palette
+---@param opts thorn.Config
 function M.get(c, opts)
   -- stylua: ignore
   local ret = {
@@ -7,7 +9,7 @@ function M.get(c, opts)
     RenderMarkdownCode      = { bg = c.bg_float },
     RenderMarkdownDash      = {fg = c.orange },
     RenderMarkdownTableHead = { fg = c.red },
-    RenderMarkdownTableRow  = { fg = c.lightgreen },
+    RenderMarkdownTableRow  = { fg = c.green_3 },
     RenderMarkdownCodeInline = "@markup.raw.markdown_inline",
   }
   for i, cl in ipairs(c.hbg) do

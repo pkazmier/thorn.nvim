@@ -1,4 +1,7 @@
 local M = {}
+
+---@param c thorn.Palette
+---@param opts thorn.Config
 function M.get(c, opts)
   -- stylua: ignore
   return {
@@ -15,7 +18,7 @@ function M.get(c, opts)
     ["@lsp.type.interface"]                    = { },
     ["@lsp.type.keyword"]                      = "@keyword",
     ["@lsp.type.lifetime"]                     = "@keyword.storage",
-    ["@lsp.type.macro"]                        = "Constant",
+    ["@lsp.type.macro"]                        = { fg = c.green_1 },
     ["@lsp.type.namespace"]                    = "@module",
     ["@lsp.type.namespace.python"]             = "@variable",
     ["@lsp.type.number"]                       = "@number",

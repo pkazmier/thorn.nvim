@@ -5,8 +5,7 @@ M.version = "2.4.1" -- x-release-please-version
 -- stylua: ignore
 --- @type thorn.Config
 M.default = {
-  theme = vim.o.background, -- 'light' or 'dark' - defaults to vim.o.background if unset
-  background = "warm", -- options are 'warm' and 'cold'
+  theme = vim.o.background == "light" and "field" or "forest", -- 'forest' or 'field' - defaults to vim.o.background if unset
 
   transparent = false, -- transparent background
   terminal = true, -- terminal colors
@@ -27,10 +26,10 @@ M.default = {
     },
   },
 
+  ---@param hl thorn.Highlights
+  ---@param palette thorn.Palette
   on_highlights = function(hl, palette) end, -- apply your own highlights
 }
-
-M.config = nil
 
 --- @param opts? thorn.Config
 M.setup = function(opts)
@@ -39,14 +38,14 @@ end
 
 M.load = function(opts)
   opts = opts and vim.tbl_deep_extend("force", {}, M.config, opts or {}) or M.config
-  local bg = vim.o.background
+  local bg = vim.o.background == "light" and "field" or "forest"
   local theme = opts.theme
 
   if bg ~= theme then
-    if vim.g.colors_name == "thorn-" .. opts.theme .. "-" .. opts.background then
+    if vim.g.colors_name == "thorn-" .. theme then
       opts.theme = bg
     else
-      vim.o.background = theme
+      vim.o.background = theme == "field" and "light" or "dark"
     end
   end
 

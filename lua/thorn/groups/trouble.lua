@@ -1,12 +1,14 @@
 local M = {}
 
+---@param c thorn.Palette
+---@param opts thorn.Config
 function M.get(c, opts)
   -- stylua: ignore
   return {
     TroubleText   = { fg = c.red },
     TroubleCount  = { fg = c.bg_float, bg = c.bg_visual },
     TroubleNormal = { fg = c.fg, bg = c.bg },
-    TroubleDiagnosticsPos = { fg = c.green },
+    TroubleDiagnosticsPos = { fg = c.green_5 },
     TroubleNormalNC = { fg = c.fg, bg = c.bg },
   }
 end

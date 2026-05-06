@@ -1,9 +1,10 @@
---- @alias thorn.Config.Theme 'light' | 'dark'
---- @alias thorn.Config.Background 'warm' | 'cold'
+--- @alias thorn.Config.Theme 'field' | 'forest'
+
+---@class thorn.Highlight: vim.api.keyset.highlight
+---@alias thorn.Highlights table<string,thorn.Highlight|string>
 
 --- @class thorn.Config
 --- @field theme? thorn.Config.Theme
---- @field background? thorn.Config.Background
 --- @field transparent? boolean
 --- @field terminal? boolean
 --- @field styles? thorn.Config.Styles
@@ -32,22 +33,17 @@
 --- @field number string
 --- @field white string
 --- @field gray string
---- @field green string
---- @field green0 string
---- @field green1 string
+--- @field green_0 string
+--- @field green_1 string
+--- @field green_2 string
+--- @field green_3 string
+--- @field green_4 string
+--- @field green_5 string
+--- @field green_6 string
 --- @field yellow string
---- @field yellow0 string
 --- @field orange string
 --- @field blue string
---- @field blue0 string
---- @field lightblue string
---- @field lightgreen string
---- @field pink string
---- @field cyan string
---- @field cyan0 string
 --- @field red string
---- @field red0 string
---- @field red1 string
 --- @field cursorline string
 --- @field separator  string
 --- @field statusbar  thorn.Palette.StatusBar
@@ -67,7 +63,7 @@
 --- @field white_bright string
 --- @field red string
 --- @field red_bright string
---- @field green string
+--- @field green_5 string
 --- @field green_bright string
 --- @field yellow string
 --- @field yellow_bright string
@@ -75,8 +71,8 @@
 --- @field blue_bright string
 --- @field magenta string
 --- @field magenta_bright string
---- @field cyan string
---- @field cyan_bright string 
+--- @field green_2 string
+--- @field green_2_bright string 
 
 --- @class thorn.Palette.StatusBar
 --- @field fg string

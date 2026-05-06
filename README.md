@@ -5,12 +5,12 @@
 
 <p align="center">
     <a href="https://github.com/jpwol/thorn.nvim/stargazers"><img src="https://img.shields.io/github/stars/jpwol/thorn.nvim?style=for-the-badge&color=FFD7AA"></a>
-    <a href="https://github.com/jpwol/thorn.nvim/issues"><img src="https://img.shields.io/github/last-commit/jpwol/thorn.nvim?style=for-the-badge&color=79C2B6"></a>
-    <a href="https://github.com/jpwol/thorn.nvim/issues"><img src="https://img.shields.io/github/issues/jpwol/thorn.nvim?style=for-the-badge&color=F9ADA0"></a>
+    <a href="https://github.com/jpwol/thorn.nvim/issues"><img src="https://img.shields.io/github/last-commit/jpwol/thorn.nvim?style=for-the-badge&color=88B497"></a>
+    <a href="https://github.com/jpwol/thorn.nvim/issues"><img src="https://img.shields.io/github/issues/jpwol/thorn.nvim?style=for-the-badge&color=F2A597"></a>
 </p>
 
 <div align="center">
-    <img src=".github/images/thorn_themes.png" />
+    <img src=".github/images/thorn_previews.png" />
 </div>
 
 Thorn is a rich, green theme made to solve two issues with many themes:
@@ -37,26 +37,18 @@ A lot of dark themes are only dark in the sense of their backgrounds. For those 
 #### Previews
 
 <details>
-    <summary> Dark Warm </summary>
-    <img src=".github/images/thorn_dark_warm.png" />
+    <summary> Forest </summary>
+    <img src=".github/images/thorn_forest.png" />
 </details>
 <details>
-    <summary> Dark Cold </summary>
-    <img src=".github/images/thorn_dark_cold.png" />
-</details>
-<details>
-    <summary> Light Warm </summary>
-    <img src=".github/images/thorn_light_warm.png" />
-</details>
-<details>
-    <summary> Light Cold </summary>
-    <img src=".github/images/thorn_light_cold.png" />
+    <summary> Field </summary>
+    <img src=".github/images/thorn_field.png" />
 </details>
 
 ## Features
 
 - Written in 100% Lua
-- **Dark** and **Light** themes available, each with a _warm_ and _cold_ background
+- **Dark** and **Light** themes available
   - See [Configuration](#configuration) for details
 - Plugin support
   - [lazy.nvim](https://github.com/folke/lazy.nvim)
@@ -72,16 +64,25 @@ A lot of dark themes are only dark in the sense of their backgrounds. For those 
   - [render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim)
   - [oil.nvim](https://github.com/stevearc/oil.nvim)
   - [oil-git.nvim](https://github.com/malewicz1337/oil-git.nvim)
+  - [mini.nvim](https://github.com/nvim-mini/mini.nvim)
 - Comes with added themes for **other applications** (see [extras](https://github.com/jpwol/thorn.nvim/tree/main/extras))!
   - [Ghostty](https://github.com/ghostty-org/ghostty)
   - [Kitty](https://github.com/kovidgoyal/kitty)
   - [Alacritty](https://github.com/alacritty/alacritty)
   - [Btop](https://github.com/aristocratos/btop)
+  - [Opencode](https://opencode.ai/)
+  - [tmux](https://github.com/tmux/tmux)
 
 > [!note]
 > If you want support for a plugin, open an issue and it **WILL** be added!
 
 ## Installation
+
+[vim.pack](https://github.com/neovim/neovim) (neovim 0.12+)
+
+```lua
+vim.pack.add({ src = "https://github.com/jpwol/thorn.nvim" })
+```
 
 [lazy.nvim](https://github.com/folke/lazy.nvim)
 
@@ -140,8 +141,7 @@ return {
     lazy = false,
     priority = 1000,
     opts = {
-        theme = nil, -- 'light' or 'dark' - defaults to vim.o.background if unset
-        background = "warm", -- options are 'warm' and 'cold'
+        theme = nil, -- 'forest' or 'field' - defaults to vim.o.background if unset
 
         transparent = false, -- transparent background
         terminal = true, -- terminal colors
@@ -181,7 +181,7 @@ on_highlights = function(hl, palette)
 
 
     -- you can also use the theme's palette
-    hl.String.fg = palette.lightgreen
+    hl.String.fg = palette.green_0
 end
 ```
 
@@ -189,34 +189,33 @@ end
 
 To install additional themes from [extras](https://github.com/jpwol/thorn.nvim/tree/main/extras), follow these steps
 
-If installing _thorn_ with a neovim package manager, locate the install location. For lazy, it should be `~/.local/share/nvim/lazy/thorn.nvim`, but paths may vary depending on distrobution and configuration.
+If installing _thorn_ with a neovim package manager, locate the install location. For `vim.pack`, it should be `~/.local/share/nvim/site/pack/core/opt/thorn.nvim`, but paths may vary depending on distrobution and configuration.
 
 Otherwise, clone this repository with `git clone https://github.com/jpwol/thorn.nvim`.
 
-Each application (Ghostty/Kitty/Alacritty/Btop) relies on a `themes` folder within the `~/.config/<application>` directory. If you haven't created that folder within the relevant directory, you can simply copy the themes folder directly. Otherwise, copy the contents of the relevant themes folder to your `~/.config/<application>/themes` folder.
+Usually, applications (e.g., Ghostty/Kitty/Alacritty/Btop) rely on a `themes` folder within the `~/.config/<application>` directory. If you haven't created that folder within the relevant directory, please do so. Then simply copy the theme files into the target application's theme directory.
 
 ```bash
 # assuming you're in the thorn.nvim directory
 
-# copying the contents of the themes folder
-cp extras/ghostty/themes/* ~/.config/ghostty/themes/
+# copying the contents of the application's folder
+cp extras/ghostty/* ~/.config/ghostty/themes/
 
-# OR copying the folder directly
-cp -r extras/ghostty/themes ~/.config/ghostty/
-
-# Additionally, you can create a symbolic link (linux)
-cp -s extras/ghostty/themes/* ~/.config/ghostty/themes/
+# Alternatively, you can create a symbolic link (linux)
+cp -s extras/ghostty/* ~/.config/ghostty/themes/
 ```
 
 After this, the theme will be available for whichever application you choose, and you can apply it like you normally would.
 
-For ghostty, you can use `ghostty +list-themes` to preview the themes, and set them in your `config` file with `theme = Thorn <Style> <Background>`.
+For **ghostty**, you can use `ghostty +list-themes` to preview the themes, and set them in your `config` file with `theme = Thorn <Style> <Background>`.
 
-For kitty, you can simply use `kitten themes` to preview and apply the theme.
+For **kitty**, you can simply use `kitten themes` to preview and apply the theme.
 
-For btop, the theme should appear in the settings menu for selection.
+For **btop**, the theme should appear in the settings menu for selection.
 
-For alacritty, you would use
+For **opencode**, copy the files from `extras/opencode` to `~/.config/opencode/themes`, then select them from `/themes`.
+
+For **alacritty**, you would use
 
 ```toml
 import = [
@@ -226,3 +225,17 @@ import = [
 ```
 
 in your `alacritty.toml` config file.
+
+For **tmux**, add this to your `tmux.conf` (this assumes you're using `~/.config/tmux` instead of `~/.tmux.conf`)
+
+```tmux
+set -g @thorn-tmux "forest" # can be 'forest' or 'field', default is 'forest'
+run-shell "/path/to/thorn.tmux"
+```
+
+Keep in mind that `thorn-forest.conf`, `thorn-field.conf`, and `thorn.tmux` should all be in the same directory.
+
+The path to _thorn's_ tmux theme can be anywhere, but it would preferrably be copied or symlinked to `~/.config/tmux/` or `~/.config/tmux/plugins`.
+
+For **noctalia-shell**, copy or symlink the `Thorn/` folder containing `Thorn.json` into `~/.config/noctalia/colorschemes/`. _Thorn_ will then be available in _noctalia's_
+colorscheme choices.

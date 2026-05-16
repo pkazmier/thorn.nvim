@@ -1,0 +1,31 @@
+# Theme: Thorn Field
+# Merge the contents below into ~/.config/lazygit/config.yml
+
+gui:
+  theme:
+    activeBorderColor:
+      - "#6E9948"
+      - bold
+    inactiveBorderColor:
+      - "#74694E"
+    searchingActiveBorderColor:
+      - "#DCA838"
+      - bold
+    optionsTextColor:
+      - "#4C8A80"
+    selectedLineBgColor:
+      - "#EEF2BA"
+    cherryPickedCommitBgColor:
+      - "#D8E4AF"
+    cherryPickedCommitFgColor:
+      - "#DCA838"
+    markedBaseCommitBgColor:
+      - "#D8E4AF"
+    markedBaseCommitFgColor:
+      - "#CF7859"
+    unstagedChangesColor:
+      - "#C5524D"
+    defaultFgColor:
+      - "#3D4A2B"
+  authorColors:
+    "*": "#92AC3F"

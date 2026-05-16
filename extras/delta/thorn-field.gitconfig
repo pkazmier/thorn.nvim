@@ -1,0 +1,58 @@
+# Theme: Thorn Field for git-delta
+#
+# Add to ~/.gitconfig (or ~/.config/git/config):
+#
+#   [include]
+#       path = /path/to/thorn.nvim/extras/delta/thorn-field.gitconfig
+#
+#   [delta]
+#       features = thorn-field
+#
+# The `syntax-theme` below references the Thorn bat tmTheme — install
+# extras/bat/thorn-field.tmTheme and run `bat cache --build` first.
+
+[delta "thorn-field"]
+    syntax-theme = Thorn Field
+
+    minus-style = syntax "#F0D4CC"
+    minus-emph-style = syntax "#E5B5A8"
+    minus-empty-line-marker-style = syntax "#F0D4CC"
+    plus-style = syntax "#E3EEB5"
+    plus-emph-style = syntax "#C8DC8E"
+    plus-empty-line-marker-style = syntax "#E3EEB5"
+
+    zero-style = syntax
+
+    line-numbers = true
+    line-numbers-minus-style = "#FF0008"
+    line-numbers-plus-style = "#6EBB30"
+    line-numbers-zero-style = "#74694E"
+    line-numbers-left-style = "#9A9F75"
+    line-numbers-right-style = "#9A9F75"
+    line-numbers-left-format = "{nm:>4}┊"
+    line-numbers-right-format = "{np:>4}│"
+
+    file-style = "#6E9948" bold
+    file-decoration-style = "#767859" ul
+    file-added-label = [+]
+    file-copied-label = [C]
+    file-modified-label = [M]
+    file-removed-label = [-]
+    file-renamed-label = [R]
+
+    hunk-header-style = "#DCA838" bold
+    hunk-header-decoration-style = "#9A9F75" box
+    hunk-header-file-style = "#6E9948"
+    hunk-header-line-number-style = "#CF7859"
+
+    commit-style = "#4C8A80" bold
+    commit-decoration-style = "#9A9F75" ol
+
+    blame-palette = "#F9FDCE" "#EEF2BA" "#D8E4AF" "#EFF5BD"
+
+    whitespace-error-style = "#F9FDCE" "#C5524D"
+
+    merge-conflict-begin-symbol-style = "#DCA838" bold
+    merge-conflict-end-symbol-style = "#DCA838" bold
+    merge-conflict-ours-diff-header-style = "#6E9948" bold
+    merge-conflict-theirs-diff-header-style = "#92AC3F" bold

@@ -72,6 +72,10 @@ A lot of dark themes are only dark in the sense of their backgrounds. For those 
   - [Btop](https://github.com/aristocratos/btop)
   - [Opencode](https://opencode.ai/)
   - [tmux](https://github.com/tmux/tmux)
+  - [lazygit](https://github.com/jesseduffield/lazygit)
+  - [bat](https://github.com/sharkdp/bat)
+  - [fzf](https://github.com/junegunn/fzf)
+  - [delta](https://github.com/dandavison/delta)
 
 > [!note]
 > If you want support for a plugin, open an issue and it **WILL** be added!
@@ -239,3 +243,37 @@ The path to _thorn's_ tmux theme can be anywhere, but it would preferrably be co
 
 For **noctalia-shell**, copy or symlink the `Thorn/` folder containing `Thorn.json` into `~/.config/noctalia/colorschemes/`. _Thorn_ will then be available in _noctalia's_
 colorscheme choices.
+
+For **lazygit**, the files in `extras/lazygit` are YAML snippets — merge the contents of `thorn-forest.yml` (or `thorn-field.yml`) into your `~/.config/lazygit/config.yml` under the existing `gui:` section. If you don't have a `config.yml`, you can copy the file directly.
+
+For **bat**, copy the `.tmTheme` files into bat's themes directory and rebuild the cache:
+
+```bash
+mkdir -p "$(bat --config-dir)/themes"
+cp extras/bat/*.tmTheme "$(bat --config-dir)/themes/"
+bat cache --build
+```
+
+Then select the theme with `bat --theme="Thorn Forest"` (or `Thorn Field`), or set it persistently via the `BAT_THEME` environment variable or in `bat`'s config file.
+
+For **fzf**, source the desired snippet from your shell rc (`.bashrc`, `.zshrc`, etc.):
+
+```sh
+source /path/to/thorn.nvim/extras/fzf/thorn-forest.sh
+# or
+source /path/to/thorn.nvim/extras/fzf/thorn-field.sh
+```
+
+The snippet appends `--color=` flags to `FZF_DEFAULT_OPTS`.
+
+For **delta**, the files in `extras/delta` are gitconfig snippets that define a named delta feature. Install the matching `bat` theme first (delta uses it for syntax highlighting), then include the snippet from your gitconfig:
+
+```gitconfig
+[include]
+    path = /path/to/thorn.nvim/extras/delta/thorn-forest.gitconfig
+
+[delta]
+    features = thorn-forest
+```
+
+Swap `thorn-forest` for `thorn-field` for the light variant. Both snippets reference the matching `Thorn Forest` / `Thorn Field` bat tmTheme, so the bat extras must be installed and the cache rebuilt (`bat cache --build`) for delta's syntax highlighting to render correctly.

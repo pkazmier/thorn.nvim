@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>name</key>
+  <string>Thorn Field</string>
+  <key>settings</key>
+  <array>
+    <dict>
+      <key>settings</key>
+      <dict>
+        <key>background</key><string>#F9FDCE</string>
+        <key>foreground</key><string>#3D4A2B</string>
+        <key>caret</key><string>#3D4A2B</string>
+        <key>lineHighlight</key><string>#EEF2BA</string>
+        <key>selection</key><string>#D8E4AF</string>
+        <key>invisibles</key><string>#9A9F75</string>
+        <key>gutter</key><string>#F9FDCE</string>
+        <key>gutterForeground</key><string>#74694E</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>name</key><string>Comment</string>
+      <key>scope</key><string>comment</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#9A9F75</string>
+        <key>fontStyle</key><string>italic</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>name</key><string>String</string>
+      <key>scope</key><string>string</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#92AC3F</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>name</key><string>Number / Constant</string>
+      <key>scope</key><string>constant.numeric, constant.language</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#DCA838</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>name</key><string>Character escape</string>
+      <key>scope</key><string>constant.character.escape</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#CF7859</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>name</key><string>Keyword</string>
+      <key>scope</key><string>keyword, keyword.control</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#CF7859</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>name</key><string>Operator</string>
+      <key>scope</key><string>keyword.operator</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#C5524D</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>name</key><string>Storage</string>
+      <key>scope</key><string>storage, storage.type</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#6E9948</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>name</key><string>Function</string>
+      <key>scope</key><string>entity.name.function, support.function</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#4C8A80</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>name</key><string>Class / Type</string>
+      <key>scope</key><string>entity.name.class, entity.name.type, support.type, support.class</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#8DAE5A</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>name</key><string>Tag</string>
+      <key>scope</key><string>entity.name.tag</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#CF7859</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>name</key><string>Attribute</string>
+      <key>scope</key><string>entity.other.attribute-name</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#DCA838</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>name</key><string>Variable</string>
+      <key>scope</key><string>variable</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#3D4A2B</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>name</key><string>Variable parameter</string>
+      <key>scope</key><string>variable.parameter</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#CF7859</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>name</key><string>Punctuation</string>
+      <key>scope</key><string>punctuation</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#74694E</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>name</key><string>Markup heading</string>
+      <key>scope</key><string>markup.heading</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#6E9948</string>
+        <key>fontStyle</key><string>bold</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>name</key><string>Markup bold</string>
+      <key>scope</key><string>markup.bold</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#DCA838</string>
+        <key>fontStyle</key><string>bold</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>name</key><string>Markup italic</string>
+      <key>scope</key><string>markup.italic</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#CF7859</string>
+        <key>fontStyle</key><string>italic</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>name</key><string>Markup link</string>
+      <key>scope</key><string>markup.underline.link</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#4C8A80</string>
+        <key>fontStyle</key><string>underline</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>name</key><string>Diff inserted</string>
+      <key>scope</key><string>markup.inserted, meta.diff.header.to-file</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#6EBB30</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>name</key><string>Diff deleted</string>
+      <key>scope</key><string>markup.deleted, meta.diff.header.from-file</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#FF0008</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>name</key><string>Diff changed</string>
+      <key>scope</key><string>markup.changed</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#218BE8</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>name</key><string>Diff range</string>
+      <key>scope</key><string>meta.diff.range</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#92AC3F</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>name</key><string>Invalid</string>
+      <key>scope</key><string>invalid, invalid.illegal</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key><string>#C5524D</string>
+        <key>fontStyle</key><string>italic</string>
+      </dict>
+    </dict>
+
+  </array>
+  <key>uuid</key>
+  <string>2c4b3d8f-7e9a-4c1d-a3b5-e8f4d1c0a312</string>
+</dict>
+</plist>
